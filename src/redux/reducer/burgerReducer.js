@@ -39,6 +39,8 @@ const reducer = (state = initialState, action) => {
       totalPrice: newPrice,
       purchasing: newPrice > 1000
     };
+  } else if (action.type === "SAVED_ORDER_SUCCESS") {
+    return initialState;
   }
 
   return state;
